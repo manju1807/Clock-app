@@ -1,42 +1,80 @@
-body{
-    margin: 0px;
-    padding:0px;
-    background-color: rgb(174, 85, 218);
-}
-.container{
-    background-color: white;
-    height: 650px;
-    width:  550px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    border-radius: 0.3rem;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    display:grid;
-    grid-template-rows: 20% 80%;
-}
+  body{
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+        margin:0px;
+        padding: 0px;
+        height: 91vh;
+        width: 100vw;
+    }
+    .container{
+        background: rgba(0, 0, 0, 0.9);
+        height: 580px;
+        width:  480px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+        border-radius: 0.3rem;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        display:grid;
+        grid-template-rows: 20% 80%;
+    }
 
-.heading{
-    font-family: 'Alegreya', serif;
-    text-align: center;
-    font-size: 35px;
-    padding: 1rem;
-}
+    .heading{
+        color: white;
+        font-family: 'Fasthand', cursive;
+        text-align: center;
+        font-size: 45px;
+        padding: 1rem;
+    }
 
-.content{
-    display: grid;
-    grid-template-rows: 20% 80%;
-}
+    .content{
+        display: grid;
+        grid-template-rows: 20% 80%;
+    }
+    .clock{
+        color:white;
+        font-size: 2rem;
+        font-family: sans-serif;
+        text-align: center;
+        justify-items: center;
+        letter-spacing: 7px;
+        padding: 1.5rem;
+    }
+    .mainclock{
+        background-color: rgb(181, 239, 249);
+        width: 10rem;
+        height: 10rem;
+        border: 15px solid white;
+        border-radius: 50%;
+        margin: 50px auto;
+        position: relative;
+        padding: 2rem;
+        justify-items: center;
+        box-shadow:0 0 0 4px rgba(0,0,0,0.1),inset 0 0 0 3px #EFEFEF,inset 0 0 10px black,0 0 10px rgba(0,0,0,0.2);
+    }
 
+     .clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-3px);
+    }
 
-.clock {
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: rgb(174, 85, 218);
-    font-size: 2rem;
-    font-family: sans-serif;
-    text-align: center;
-    letter-spacing: 7px;
-}
+    .hand {
+        width: 50%;
+        height: 6px;
+        border-radius:500rem;
+        background: black;
+        position: absolute;
+        top: 50%;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
 
+    .second-hand{
+        background-color: red;
+        border-bottom-left-radius: 500rem;
+        border-top-left-radius:500rem;
+        height:2px;
+    }
